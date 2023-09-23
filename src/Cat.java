@@ -1,8 +1,8 @@
 public class Cat {
 
-    private int age;
-    private String name;
-    private double weight;
+    private final int age;
+    private final String name;
+    private final double weight;
 
     public Cat(String catName, int catAge, double catWeight)
     {
@@ -12,7 +12,12 @@ public class Cat {
     }
     public void introduce()
     {
-        System.out.println("Hello my name is " + name + " Meow" );
+        if (age > 7) {
+        System.out.println("Hello my name is " + name + " and I am an older cat, Meow!" );
+    }else{
+            System.out.println("Hello my name is " + name + " and I am a younger cat, Meow!" );
+        }
+
     }
 
     public void printCatInfo() {
